@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        html,
+        body {
+            margin: 0;
+        }
+        .title {
+            margin-top: 0;
+            padding: 1em;
+            background-color: #B36093;
+            color: #fff;
+            text-align: center;
+        }
+        .canvas {
+            border: 2px solid #B36093;
+            background-color: #f1f1f1;
+            text-align: center;
+        }
+        .params {
+            padding: .5em;
+            background-color: #d2d2d2;
+        }
+        #pyramid {
+            margin: 1em;
+            font-family: "Courier New", monospace;
+            line-height: 1em;
+        }
+        .brick,
+        .space {
+            display: inline-block;
+            vertical-align: middle;
+            height: 1em;
+            width: 1em;
+            margin: 1px;
+            color: #fff;
+            font-size: .8em;
+            text-align: center;
+/*            text-indent: 100%;*/
+            overflow: hidden;
+        }
+        .brick {
+            background-color: brown;
+        }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Pyramid Slide</h1>
+    <h3>Behold this wonderful pyramid:</h3>
+    <section class="canvas">
+        <div class="params">
+            <label for="pyramid-symbol">Brick Symbol</label>
+            <select id="pyramid-symbol">
+                <option value="#">#</option>
+                <option value="@">@</option>
+                <option value="X">X</option>
+                <option value="$">$</option>
+            </select>
+            <label for="pyramid-size">How high?</label>
+            <input id="pyramid-size" type="range" min="1" max="20" />
+            <span id="pyramid-size-value"></span>
+        </div>
+        <div id="pyramid">
+          <!-- Our pyramid will go inside here -->
+          <div id="construction">
+            <p>Uh oh! the pyramid is still under construction.</p>
+            <p>Check back again soon... our developers are hard at work as we speak!</p>
+          </div>
+        </div>
+    </section>
+    <script src="pyramid.js"></script>
+  </body>
+</html>
